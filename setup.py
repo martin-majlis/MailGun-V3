@@ -16,7 +16,7 @@ tests_require = []
 
 setup(
     name='MailGunV3',
-    version='0.1',
+    version='0.2',
     description='Python wrapper for Mailgun REST API.',
     #long_description=README + '\n\n' + CHANGES,
     classifiers=[
