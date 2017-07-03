@@ -5,7 +5,7 @@ This package provides fluent API for `MailGun API`_.
 
 .. _MailGun API: http://mailgun-documentation.readthedocs.io/
 
-|build-status| |docs|
+|build-status| |docs| |cc-badge| |cc-issues|
 
 .. toctree::
    :maxdepth: 2
@@ -96,4 +96,11 @@ External Links
 	:target: http://mailgunv3.readthedocs.io/en/latest/?badge=latest
 	:alt: Documentation Status
 
+.. |cc-badge| image:: https://codeclimate.com/github/martin-majlis/MailGunV3/badges/gpa.svg
+   :target: https://codeclimate.com/github/martin-majlis/MailGunV3
+   :alt: Code Climate
+
+.. |cc-issues| image:: https://codeclimate.com/github/martin-majlis/MailGunV3/badges/issue_count.svg
+   :target: https://codeclimate.com/github/martin-majlis/MailGunV3
+   :alt: Issue Count
 

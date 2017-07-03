@@ -16,3 +16,6 @@ deploy:
   on:
     tags: true
     branch: master
+
+after_sucess:
+- CODECLIMATE_REPO_TOKEN=f71b8777af3523a62c1b487e7d590e1894353daa codeclimate-test-reporter
