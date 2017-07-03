@@ -1,0 +1,21 @@
+language: python
+python:
+- '2.7'
+- '3.3'
+- '3.4'
+- '3.5'
+- '3.6'
+install: pip install -r requirements.txt
+script:
+- touch foo
+deploy:
+  provider: pypi
+  user: socialmind
+  password:
+    secure: jKUKWvonigyqCXUeTnEvpIASKKtB2yHLzb6QEkiTG6ssFIklYk0gqt2sjQonvNudbpUD27sMKZnCah8Gi8yoiAnkr78mSAngv2/sBgnULnMr+gIv3gygS2Ozny+wWvPBUvl5gI7prDLyeW9CNmrR/szHI6+9B6aito/T4tmTVizJsUMCU2IBl8lPriucd1Z2mXknCO3ROz9MJzejb+AMpTDSJExMDlOeZtfX3tvuVhM8XSZY/T3tulJgjT4Yic1mrvTyS6N0LGwgmLLfHonO4+Kcja+vc57UzohB95DtamlrVKpL+A8aCr/1khH5g3fLzQKiLwZQth+HaGpl+911SFfr3bzy6CZVzLsiknEU1YYP90vYCn1p4pzbG3PgxqrsyU259IYgedTTlwt0scnEbaZPYbUnTzRmvon4o6PcIFUe49ocuGaGQKZsRVIfxKSCN1ZyFkmjOLIBlz5T+kv1+9aTHT/FdkL6+bCZ55VGjpRL1IcDdv0q/KPN/MiI5+8AW1V0DV4FfqLFSxSojuJMeyx8S8jpHIE3wBVX7mLXbPdVaBZLGBIHwP8ex5GrB9Zb5k+CLumx1RSEEWeh5kP5ZIGURDSqIiA60EEaANWoJF1DGZlRIIGVtvljCaf70/t4PSZ4o3z4kMeq8P+XHZtbxKPAq8u3y+PfqylA1w8TYyk=
+  on:
+    tags: true
+    branch: master
+after_sucess:
+- CODECLIMATE_REPO_TOKEN=97962937bc5c67607343dbdd5517fbba0c6865da codeclimate-test-reporter
+
