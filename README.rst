@@ -7,8 +7,13 @@ This package provides fluent API for `MailGun API`_.
 
 |build-status| |docs| |cc-badge| |cc-issues|
 
+.. PYPI-BEGIN
 .. toctree::
    :maxdepth: 2
+
+   CHANGES
+   API
+.. PYPI-END
 
 Installation
 ------------
@@ -104,3 +109,4 @@ External Links
    :target: https://codeclimate.com/github/martin-majlis/MailGunV3
    :alt: Issue Count
 
+	

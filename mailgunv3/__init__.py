@@ -13,6 +13,10 @@ BASE_URL = 'https://api.mailgun.net/v3'
 
 
 class MailGunV3(object):
+    """
+    This is the only class that should be directly initialized.
+    """
+
     def __init__(self, domain, private_key, public_key):
         self.domain = domain
         self.private_key = private_key

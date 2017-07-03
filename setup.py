@@ -1,12 +1,16 @@
 import os
+import re
 
 from setuptools import setup, find_packages
 
-#here = os.path.abspath(os.path.dirname(__file__))
-# with open(os.path.join(here, 'README.txt')) as f:
-#    README = f.read()
-# with open(os.path.join(here, 'CHANGES.txt')) as f:
-#    CHANGES = f.read()
+def fix_doc(txt):
+	return re.sub(r'\.\. PYPI-BEGIN([\r\n]|.)*?PYPI-END', '', txt, re.DOTALL)
+
+with open('README.rst') as fileR:
+    README = fix_doc(fileR.read())
+
+with open('CHANGES.rst') as fileC:
+    CHANGES = fix_doc(fileC.read())
 
 requires = [
     'requests',
@@ -16,9 +20,9 @@ tests_require = []
 
 setup(
     name='MailGunV3',
-    version='0.2.2',
+    version='0.2.4',
     description='Python wrapper for Mailgun REST API.',
-    #long_description=README + '\n\n' + CHANGES,
+    long_description=README + '\n\n' + CHANGES,
     classifiers=[
         'Programming Language :: Python',
     ],
