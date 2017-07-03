@@ -7,6 +7,9 @@ This package provides fluent API for `MailGun API`_.
 
 |build-status| |docs|
 
+.. toctree::
+   :maxdepth: 2
+
 Installation
 ------------
 
