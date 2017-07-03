@@ -1,20 +1,96 @@
-.. MailGun V3 documentation master file, created by
-   sphinx-quickstart on Mon Jul  3 09:08:55 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+MailGun V3
+========================
 
-Welcome to MailGun V3's documentation!
-======================================
+This package provides fluent API for `MailGun API`_.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+.. _MailGun API: http://mailgun-documentation.readthedocs.io/
+
+|build-status| |docs|
+
+Installation
+------------
+
+.. code-block:: python
+
+    pip install mailgunv3
+
+
+Usage
+-----
+
+.. code-block:: python
+
+    domain = 'example.com'
+
+    mg = MailGunV3(domain,
+                   'key-asdfghjkl',
+                   'pubkey-asdfghjkl',
+                   )
+
+    res1 = mg.\
+        mailinglist('mlA-' + str(random.randint(0, 10)) + '@' + domain).\
+        create('Test Mailing List').\
+        delete()
+    print(repr(res1))
+
+    res2 = mg.\
+        mailinglist('mlB-' + str(random.randint(0, 10)) + '@' + domain).\
+        create('Test Mailing List').\
+        update(
+            name='New Name',
+            description='New Description',
+    ).get()
+    print(repr(res2))
+
+    res3 = mg.mailinglist('newsletter-dev@' + domain).members()
+    print(repr(res3))
+
+    res4 = mg.\
+        mailinglist('newsletter-dev@' + domain).\
+        member('a01-' + str(random.randint(0, 1000)) + '@' + domain).\
+        create(
+            name='Foo Bar',
+            params={'a': 1, 'b': 2}
+        ).get()
+    print(repr(res4))
+
+    res5 = mg.\
+        mailinglist('newsletter-dev@' + domain).\
+        member('a01-' + str(random.randint(0, 1000)) + '@' + domain).\
+        update(
+            name='Foo Bar - EDIT',
+            params={'a': 1, 'b': 2}
+        ).get()
+    print(repr(res5))
+
+    res6 = mg.mailinglist('newsletter-dev@' + domain).members()
+    print(repr(res6))
+
+    res7 = mg.mailinglist(
+        'newsletter-dev@' + domain).member('a01@' + domain).delete()
+    print(repr(res7))
+
+External Links
+--------------
+
+* `GitHub`_
+* `PyPi`_
+* `Travis`_
+* `ReadTheDocs`_
+
+.. _GitHub: https://github.com/martin-majlis/MailGunV3/
+.. _PyPi: https://pypi.python.org/pypi/MailGunV3/
+.. _Travis: https://travis-ci.org/martin-majlis/MailGunV3/
+.. _ReadTheDocs: http://mailgunv3.readthedocs.io/
 
 
 
-Indices and tables
-==================
+.. |build-status| image:: https://travis-ci.org/martin-majlis/MailGunV3.svg?branch=master
+    :alt: build status
+    :target: https://travis-ci.org/martin-majlis/MailGunV3
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. |docs| image:: https://readthedocs.org/projects/mailgunv3/badge/?version=latest
+	:target: http://mailgunv3.readthedocs.io/en/latest/?badge=latest
+	:alt: Documentation Status
+
+
