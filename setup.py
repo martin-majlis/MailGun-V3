@@ -15,7 +15,7 @@ requires = [
 tests_require = []
 
 setup(
-    name='pymailgun',
+    name='MailGunV3',
     version='0.1',
     description='Python wrapper for Mailgun REST API.',
     #long_description=README + '\n\n' + CHANGES,
