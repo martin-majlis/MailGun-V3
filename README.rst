@@ -1,5 +1,5 @@
 MailGun V3
-========================
+==========
 
 This package provides fluent API for `MailGun API`_.
 
@@ -103,15 +103,13 @@ External Links
     :target: https://travis-ci.org/martin-majlis/MailGunV3
 
 .. |docs| image:: https://readthedocs.org/projects/mailgunv3/badge/?version=latest
-	:target: http://mailgunv3.readthedocs.io/en/latest/?badge=latest
-	:alt: Documentation Status
+    :target: http://mailgunv3.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
 .. |cc-badge| image:: https://codeclimate.com/github/martin-majlis/MailGunV3/badges/gpa.svg
-   :target: https://codeclimate.com/github/martin-majlis/MailGunV3
-   :alt: Code Climate
+    :target: https://codeclimate.com/github/martin-majlis/MailGunV3
+    :alt: Code Climate
 
 .. |cc-issues| image:: https://codeclimate.com/github/martin-majlis/MailGunV3/badges/issue_count.svg
-   :target: https://codeclimate.com/github/martin-majlis/MailGunV3
-   :alt: Issue Count
-
-	
+    :target: https://codeclimate.com/github/martin-majlis/MailGunV3
+    :alt: Issue Count
