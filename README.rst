@@ -1,5 +1,5 @@
 MailGun V3
-========================
+==========
 
 This package provides fluent API for `MailGun API`_.
 
@@ -32,50 +32,55 @@ Usage
 
     mg = MailGunV3(domain,
                    'key-asdfghjkl',
-                   'pubkey-asdfghjkl',
-                   )
+                   'pubkey-asdfghjkl')
 
-    res1 = mg.\
-        mailinglist('mlA-' + str(random.randint(0, 10)) + '@' + domain).\
-        create('Test Mailing List').\
-        delete()
+    res1 = (mg.
+            mailinglist('mlA-{}@{}'.format(random.randint(0, 10), domain)).
+            create('Test Mailing List').
+            delete())
     print(repr(res1))
 
-    res2 = mg.\
-        mailinglist('mlB-' + str(random.randint(0, 10)) + '@' + domain).\
-        create('Test Mailing List').\
-        update(
-            name='New Name',
-            description='New Description',
-    ).get()
+    res2 = (mg.
+            mailinglist('mlB-{}@{}'.format(random.randint(0, 10), domain)).
+            create('Test Mailing List').
+            update(
+                name='New Name',
+                description='New Description').
+            get())
     print(repr(res2))
 
-    res3 = mg.mailinglist('newsletter-dev@' + domain).members()
+    res3 = (mg.
+            mailinglist('newsletter-dev@' + domain).
+            members())
     print(repr(res3))
 
-    res4 = mg.\
-        mailinglist('newsletter-dev@' + domain).\
-        member('a01-' + str(random.randint(0, 1000)) + '@' + domain).\
-        create(
-            name='Foo Bar',
-            params={'a': 1, 'b': 2}
-        ).get()
+    res4 = (mg.
+            mailinglist('newsletter-dev@' + domain).
+            member('a01-{}@{}'.format(random.randint(0, 1000), domain)).
+            create(
+                name='Foo Bar',
+                params={'a': 1, 'b': 2}).
+            get())
     print(repr(res4))
 
-    res5 = mg.\
-        mailinglist('newsletter-dev@' + domain).\
-        member('a01-' + str(random.randint(0, 1000)) + '@' + domain).\
-        update(
-            name='Foo Bar - EDIT',
-            params={'a': 1, 'b': 2}
-        ).get()
+    res5 = (mg.
+            mailinglist('newsletter-dev@' + domain).
+            member('a01-{}@{}'.format(random.randint(0, 1000), domain)).
+            update(
+                name='Foo Bar - EDIT',
+                params={'a': 1, 'b': 2}).
+            get())
     print(repr(res5))
 
-    res6 = mg.mailinglist('newsletter-dev@' + domain).members()
+    res6 = (mg.
+            mailinglist('newsletter-dev@' + domain).
+            members())
     print(repr(res6))
 
-    res7 = mg.mailinglist(
-        'newsletter-dev@' + domain).member('a01@' + domain).delete()
+    res7 = (mg.
+            mailinglist('newsletter-dev@' + domain).
+            member('a01@' + domain).
+            delete())
     print(repr(res7))
 
 External Links
@@ -98,15 +103,13 @@ External Links
     :target: https://travis-ci.org/martin-majlis/MailGunV3
 
 .. |docs| image:: https://readthedocs.org/projects/mailgunv3/badge/?version=latest
-	:target: http://mailgunv3.readthedocs.io/en/latest/?badge=latest
-	:alt: Documentation Status
+    :target: http://mailgunv3.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
 .. |cc-badge| image:: https://codeclimate.com/github/martin-majlis/MailGunV3/badges/gpa.svg
-   :target: https://codeclimate.com/github/martin-majlis/MailGunV3
-   :alt: Code Climate
+    :target: https://codeclimate.com/github/martin-majlis/MailGunV3
+    :alt: Code Climate
 
 .. |cc-issues| image:: https://codeclimate.com/github/martin-majlis/MailGunV3/badges/issue_count.svg
-   :target: https://codeclimate.com/github/martin-majlis/MailGunV3
-   :alt: Issue Count
-
-	
+    :target: https://codeclimate.com/github/martin-majlis/MailGunV3
+    :alt: Issue Count
