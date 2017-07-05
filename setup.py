@@ -21,7 +21,7 @@ requires = [
 tests_require = []
 
 setup(
-    name='MailGunV3',
+    name='MailGun-V3',
     version='0.2.8',
     description='Python Wrapper With Fluent API for Mailgun v3',
     long_description=README + '\n\n' + CHANGES,
