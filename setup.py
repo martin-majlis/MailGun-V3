@@ -19,12 +19,20 @@ requires = [
 tests_require = []
 
 setup(
-    name='MailGunV3',
-    version='0.2.4',
-    description='Python wrapper for Mailgun REST API.',
+    name='MailGun V3',
+    version='0.2.5',
+    description='Mailgun - Fluent API for v3',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
+        'Development Status :: 4 - Beta',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Topic :: Communications :: Email',
+        'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     author='Martin Majlis',
     author_email='martin@majlis.cz',

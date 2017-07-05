@@ -1,0 +1,4 @@
+include LICENSE
+include CHANGES.srt
+include README.rst
+recursive-include mailgunv3 *.py
