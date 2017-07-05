@@ -3,8 +3,10 @@ import re
 
 from setuptools import setup, find_packages
 
+
 def fix_doc(txt):
-	return re.sub(r'\.\. PYPI-BEGIN([\r\n]|.)*?PYPI-END', '', txt, re.DOTALL)
+    return re.sub(r'\.\. PYPI-BEGIN([\r\n]|.)*?PYPI-END', '', txt, re.DOTALL)
+
 
 with open('README.rst') as fileR:
     README = fix_doc(fileR.read())
@@ -19,8 +21,8 @@ requires = [
 tests_require = []
 
 setup(
-    name='MailGun V3',
-    version='0.2.5',
+    name='MailGunV3',
+    version='0.2.6',
     description='Mailgun - Fluent API for v3',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
