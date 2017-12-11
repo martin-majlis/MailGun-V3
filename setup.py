@@ -22,7 +22,7 @@ tests_require = []
 
 setup(
     name='MailGun-V3',
-    version='0.2.8',
+    version='0.3.1',
     description='Python Wrapper With Fluent API for Mailgun v3',
     long_description=README + '\n\n' + CHANGES,
     classifiers=[
