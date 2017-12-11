@@ -91,25 +91,25 @@ External Links
 * `Travis`_
 * `ReadTheDocs`_
 
-.. _GitHub: https://github.com/martin-majlis/MailGunV3/
-.. _PyPi: https://pypi.python.org/pypi/MailGunV3/
-.. _Travis: https://travis-ci.org/martin-majlis/MailGunV3/
-.. _ReadTheDocs: http://mailgunv3.readthedocs.io/
+.. _GitHub: https://github.com/martin-majlis/MailGun-V3/
+.. _PyPi: https://pypi.python.org/pypi/MailGun-V3/
+.. _Travis: https://travis-ci.org/martin-majlis/MailGun-V3/
+.. _ReadTheDocs: http://mailgun-v3.readthedocs.io/
 
 
 
-.. |build-status| image:: https://travis-ci.org/martin-majlis/MailGunV3.svg?branch=master
+.. |build-status| image:: https://travis-ci.org/martin-majlis/MailGun-V3.svg?branch=master
     :alt: build status
-    :target: https://travis-ci.org/martin-majlis/MailGunV3
+    :target: https://travis-ci.org/martin-majlis/MailGun-V3
 
-.. |docs| image:: https://readthedocs.org/projects/mailgunv3/badge/?version=latest
-    :target: http://mailgunv3.readthedocs.io/en/latest/?badge=latest
+.. |docs| image:: https://readthedocs.org/projects/mailgun-v3/badge/?version=latest
+    :target: http://mailgun-v3.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-.. |cc-badge| image:: https://codeclimate.com/github/martin-majlis/MailGunV3/badges/gpa.svg
-    :target: https://codeclimate.com/github/martin-majlis/MailGunV3
+.. |cc-badge| image:: https://codeclimate.com/github/martin-majlis/MailGun-V3/badges/gpa.svg
+    :target: https://codeclimate.com/github/martin-majlis/MailGun-V3
     :alt: Code Climate
 
-.. |cc-issues| image:: https://codeclimate.com/github/martin-majlis/MailGunV3/badges/issue_count.svg
-    :target: https://codeclimate.com/github/martin-majlis/MailGunV3
+.. |cc-issues| image:: https://codeclimate.com/github/martin-majlis/MailGun-V3/badges/issue_count.svg
+    :target: https://codeclimate.com/github/martin-majlis/MailGun-V3
     :alt: Issue Count
