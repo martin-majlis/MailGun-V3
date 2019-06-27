@@ -24,7 +24,6 @@ class MailGunV3(object):
         self.auth = ('api', private_key)
 
     def _post(self, url, data, auth=None, files=None, include_domain=True):
-        print(repr(url))
         return requests.post(url, auth=auth or self.auth, data=data, files=files)
 
     def _get(self, url, params=None, auth=None, include_domain=True):
