@@ -21,3 +21,11 @@ pypi-html:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+release:
+	if [ "x$(MSG)" = "x" -o "x$(VERSION)" = "x" ]; then \
+		echo "Use make release MSG='some msg' VERSION='1.2.3'"; \
+		exit 1; \
+	fi; \
+	git tag $(VERSION) -m "$(MSG)"; \
+	git push --tags origin master
